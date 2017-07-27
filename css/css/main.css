@@ -298,19 +298,54 @@ header {
 			.picture-spacer {
 			    position: relative;
 			}
-			/*.picture img {
-			    position: absolute;
-			    top: 0;
-			    left: 0;
-			    bottom: 0;
-			    right: 0;
-			}*/
+			
 			.picture  img {
 				max-width: 100%;
 				min-width: 100%;
 			}
 
 /*...............................*/
+
+/* footer */
+#footer {
+    background: #06273b;
+    color: #fff;
+    font-size: 12px;
+    line-height: 36px;
+}
+	.footer-top {
+	    width: 100%;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    padding: 72px 0 36px;
+	    border-bottom: 1px solid hsla(0,0%,100%,.2);
+	}
+		.footer-top>div {
+		    -webkit-box-flex: 1;
+		    -ms-flex: 1;
+		    flex: 1;
+		}
+		.footer-top h4 {
+		    font-size: inherit;
+		    margin-bottom: 1rem;
+		}
+		.footer-top a {
+		    display: block;
+		}
+
+	.footer-bottom {
+	    width: 100%;
+	    color: hsla(0,0%,100%,.6);
+	    padding: 64px 0;
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	}
+/*...................*/
 
 /* một số thẻ mặc định */
     h1, h3 {

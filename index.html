@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/responsive.css">
+		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	<body>
 		<!-- begin header -->
@@ -18,9 +19,7 @@
 				<!-- brand and button menu -->
 				<div class="container">
 					<div class="navbar-header">
-						<button type="button" id="button-nav" class="navbar-toggle" onclick="openNav()">
-
-							<span class="sr-only">Toggle navigation</span>
+						<button type="button" id="btn-drawer-open" class="navbar-toggle">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -28,25 +27,22 @@
 						<a class="navbar-brand" href="#">TrueCaller</a>
 					</div>
 				</div>
-				<script type="text/javascript">
-					function openNav() {
-				    	$('#mySidenav').css({
-
-				    		"width" : "300px",
-				    	});
-				    }
-
-				    function closeNav() {
-				    	$('#mySidenav').css({
-
-				    		"width" : "0px";
-				    	});
-				    }
-				</script>
 				<!-- end button and brand -->
-
-				<div class="nav-side-menu" id="mySidenav">
-					<a class="navbar-brand" href="#">Nguyen Manh</a>
+				<div >
+					<div id="overlay-menu"></div>
+					<div class="drawer" id="side-nav-mobile">
+						<div class="drawer-top">
+							<a class="navbar-brand" href="#">Nguyễn Mạnh</a>
+						</div>
+						<div class="drawer-menu">
+							<a href="#" class="drawer-item">Home</a>
+							<a href="#" class="drawer-item">Get the app</a>
+							<a href="#" class="drawer-item">Company</a>
+							<a href="#" class="drawer-item">Services</a>
+							<a href="#" class="drawer-item">Support</a>
+						</div>
+						<button id="btn-drawer-close"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></button>
+					</div>
 				</div>
 			</nav>
 		</header>
@@ -86,28 +82,23 @@
 			<!-- begin home-download -->
 			<div class="home-download">
 				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<div class="row home-download-content">
+						<div class="col-md-6 col-lg-6">
 							<div class="home-download-text">
 								<h3 class="home-download-title">Get Truecaller on your phone</h3>
 								<p class="home-download-copy">The best caller ID and block for all your calls and SMS.</p>
 							</div>
-
-							<!-- <div class="row"> -->
-								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-									<a href="#" class="btn btn-success">DOWNLOAD NOW</a>
-								</div>
-								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-									<a href="#" class="btn btn-black">KNOW MORE <i class="fa fa-play-circle" aria-hidden="true"></i></a>
-								</div>
-							<!-- </div> -->
+							<div class="col-md-6 col-lg-6">
+								<a href="#" class="btn btn-success">DOWNLOAD NOW</a>
+							</div>
+							<div class="col-md-6 col-lg-6">
+								<a href="#" class="btn btn-black">KNOW MORE <i class="fa fa-play-circle" aria-hidden="true"></i></a>
+							</div>
 						</div>
-						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-							<!-- <div class="picture-spacer" style="padding-top: 207.143%;"></div> -->
-							<picture class="picture home-download-image">
-								<source src="images/home-phone-android.png" type="image/webp">
+						<div class="col-md-6 col-lg-6">
+							<div class="picture home-download-image">
 								<img src="images/home-phone-android.png">
-							</picture>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -118,79 +109,109 @@
 
 		<!-- begin footer -->
 		<footer>
-			<div id="footer">
-				<div class="footer-container container">
-					<div class="footer-top">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-								<div class="footer-links">
-									<h4>Product</h4> 
-									<a href="/truecaller" class="">Get the app</a> 
-									<a href="https://support.truecaller.com" target="_blank" rel="noopener">Support</a>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-								<div class="footer-links">
-									<h4>Product</h4> 
-									<a href="/truecaller" class="">Get the app</a> 
-									<a href="https://support.truecaller.com" target="_blank" rel="noopener">Support</a>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-								<div class="footer-links">
-									<h4>Product</h4> 
-									<a href="/truecaller" class="">Get the app</a> 
-									<a href="https://support.truecaller.com" target="_blank" rel="noopener">Support</a>
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-								<div class="footer-social">
-									<div class="icon-social">
-										<a href="#">
-											<i class="fa fa-facebook" aria-hidden="true"></i>
-										</a>
-									</div>
-									<div class="icon-social">
-										<a href="#">
-											<i class="fa fa-facebook" aria-hidden="true"></i>
-										</a>
-									</div>
-									<div class="icon-social">
-										<a href="#">
-											<i class="fa fa-facebook" aria-hidden="true"></i>
-										</a>
-									</div>
-									<div class="icon-social">
-										<a href="#">
-											<i class="fa fa-facebook" aria-hidden="true"></i>
-										</a>
-									</div>
+			<div id="footer-widgets">
+				<div class="container">
+					<div class="row inner-wrapper">
+						<div class="col-sm-6 col-md-3">
+							<div class="footer-widget-area">
+								<h3 class="widget-title">About Us</h3>
+								<div class="text-widget">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco 
 								</div>
 							</div>
 						</div>
-					</div>
-
-					<div class="footer-bottom">
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-								<div class="footer-logo text-center">
-									<a href="#" class="navbar-brand">Nguyễn Mạnh</a>
+						<div class="col-sm-6 col-md-3">
+							<div class="footer-widget-area">
+								<h3 class="widget-title">Product</h3>
+								<div class="widget-links-container">
+									<ul class="widget-links">
+										<li>
+											<a href="#">Get the app</a>
+										</li>
+										<li>
+											<a href="#">Support</a>
+										</li>
+									</ul>
 								</div>
 							</div>
-
-							<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-								<div class="footer-legal">
-									<span>Copyright © 2009-2017 True Software Scandinavia AB. All rights reserved. Truecaller™ is a registered trademark. Responsible publisher: Alan Mamedi appointed by True Software Scandinavia AB. Database name: Truecaller.com<br>
-										<a href="/terms-of-service">Terms of service</a> | 
-										<a href="/privacy-policy" Privacy policy</a> | 
-										<a href="/cookie-policy" >Cookie policy</a>
-									</span>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="footer-widget-area">
+								<h3 class="widget-title">Service</h3>
+								<div class="widget-links-container">
+									<ul class="widget-links">
+										<li>
+											<a href="#">Developers</a>
+										</li>
+										<li>
+											<a href="#">Advertise</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="footer-widget-area social-links-footer">
+								<h3 class="widget-title">Social links</h3>
+								<div class="widget-socials-links">
+									<ul class="menu-social-links">
+										<li>
+											<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<!-- end footer widgets -->
+			<!-- begin footer-bottom -->
+			<div id="footer-bottom">
+				<div class="container">
+					<div class="row footer-bottom-inner">
+						<div class=" col-md-6">
+							<div class="footer-bottom-col">
+								<p class="copyright">
+									Copyright © 2017 <a href="#">Nguyễn Mạnh</a>. All rights reserved.
+								</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="footer-bottom-col">
+								<div class="footer-bottom-social">
+									<ul class="menu-social-links">
+										<li>
+											<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end footer-bottom -->
 		</footer>
 		<!-- end footer -->
 	</body>
